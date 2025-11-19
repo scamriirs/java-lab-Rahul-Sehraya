@@ -1,8 +1,12 @@
 public class MultipleCatch {
     public static void main(String[] args) {
         try {
-            String s = null;
-            System.out.println("Length: " + s.length());
+            String s = args.length > 0 ? args[0] : null;
+            if (s != null) {
+                System.out.println("Length: " + s.length());
+            } else {
+                throw new NullPointerException("String reference is null");
+            }
         } catch (ArithmeticException ae) {
             System.out.println("Arithmetic problem: " + ae.getMessage());
         } catch (NullPointerException ne) {

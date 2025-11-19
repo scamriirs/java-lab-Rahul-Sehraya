@@ -1,4 +1,4 @@
-interface Student {
+interface StudentDetails {
     void getStudentDetails(String name, int roll);
 }
 
@@ -6,7 +6,7 @@ interface Marks {
     void getMarks(int m1, int m2, int m3);
 }
 
-class Result implements Student, Marks {
+class ResultRecord implements StudentDetails, Marks {
     String name;
     int roll;
     int m1, m2, m3;
@@ -46,9 +46,9 @@ class Result implements Student, Marks {
 public class InterfaceResult {
     public static void main(String[] args) {
 
-        Result r = new Result();
+        ResultRecord r = new ResultRecord();
 
-        r.getStudentDetails("Rahul", 081);
+        r.getStudentDetails("Rahul", 81);
         r.getMarks(78, 85, 90);
 
         r.displayResult();

@@ -9,19 +9,19 @@ class Account {
 
     void checkBalance() {
         System.out.println("Account No: " + accountNo);
-        System.out.println("Current Balance: ₹" + balance);
+        System.out.println("Current Balance: Rs." + balance);
     }
 
     void deposit(double amount) {
         balance += amount;
-        System.out.println("Deposited: ₹" + amount);
+        System.out.println("Deposited: Rs." + amount);
         checkBalance();
     }
 
     void withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;
-            System.out.println("Withdrawn: ₹" + amount);
+            System.out.println("Withdrawn: Rs." + amount);
         } else {
             System.out.println("Insufficient Balance!");
         }
@@ -40,7 +40,7 @@ class Savings extends Account {
     void addInterest() {
         double interest = balance * (interestRate / 100);
         balance += interest;
-        System.out.println("Interest Added: ₹" + interest);
+        System.out.println("Interest Added: Rs." + interest);
         checkBalance();
     }
 }
@@ -57,7 +57,7 @@ class Current extends Account {
     void withdraw(double amount) {
         if (amount <= balance + overdraftLimit) {
             balance -= amount;
-            System.out.println("Withdrawn: ₹" + amount);
+            System.out.println("Withdrawn: Rs." + amount);
         } else {
             System.out.println("Overdraft Limit Exceeded!");
         }
@@ -79,7 +79,7 @@ public class Accounts {
         Current c = new Current(2001, 3000, 2000);
         c.checkBalance();
         c.deposit(1500);
-        c.withdraw(6000); // allowed due to overdraft
-        c.withdraw(2000); // may exceed overdraft
+        c.withdraw(6000); 
+        c.withdraw(2000);
     }
 }

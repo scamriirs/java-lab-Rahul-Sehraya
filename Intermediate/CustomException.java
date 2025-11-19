@@ -14,7 +14,7 @@ class Voter {
     }
 }
 
-public class CustomExceptionDemo {
+class CustomExceptionDemo {
     public static void main(String[] args) {
         int[] testAges = {20, 16};
 

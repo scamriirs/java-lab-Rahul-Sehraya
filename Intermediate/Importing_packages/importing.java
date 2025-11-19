@@ -1,4 +1,4 @@
-import mypackage.Addition;
+package Importing_packages;
 
 public class importing {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-public class Result extends Student {
+public class StudentResult extends Student {
     int m1, m2, m3;
 
-    public Result(String name, int roll, int m1, int m2, int m3) {
+    public StudentResult(String name, int roll, int m1, int m2, int m3) {
         super(name, roll);
         this.m1 = m1;
         this.m2 = m2;
