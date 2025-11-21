@@ -16,6 +16,6 @@ public class factorial {
     public static void main(String[] args) {
         int number = 5;
         long result = calculateFactorial(number);
-        System.out.println("Factorial of " + number + " is: " + result); // Output: Factorial of 5 is: 120
+        System.out.println("Factorial of " + number + " is: " + result); 
     }
 }
